@@ -761,7 +761,7 @@ def get_ai_response(user_message):
     
     payload = {
         "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"maxOutputTokens": 1000}
+        "generationConfig": {"maxOutputTokens": 65536}
     }
 
     try:
