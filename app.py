@@ -767,7 +767,7 @@ def get_ai_response(user_message):
     try:
         # Lưu ý: Trên Streamlit Cloud, nên dùng st.secrets để bảo mật API Key
         api_key = st.secrets["GEMINI_API_KEY"] if "GEMINI_API_KEY" in st.secrets else "YOUR_API_KEY_HERE"
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key={api_key}"
         
         response = requests.post(url, json=payload)
         response.raise_for_status()
